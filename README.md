@@ -74,4 +74,4 @@ uvicorn app:app --reload
 
 ## Author
 
-Wonderful DIY Singh
+Jasleen Kaur
