@@ -1,53 +1,65 @@
-# Screen Time Journal API - Setup Guide
+# Screen Time Journal - Setup Guide
 
-## Prerequisites
+## Project Overview
 
-Before running the project, make sure you have installed:
+Screen Time Journal is a full-stack application developed to help users track and manage their daily screen usage. The backend is built using FastAPI and PostgreSQL, while the frontend communicates with the backend through REST APIs.
 
-- Python 3.10 or later
+---
+
+## Technologies Used
+
+- Python
+- FastAPI
 - PostgreSQL
-- Git
-- Visual Studio Code
+- psycopg2
+- Uvicorn
+- Git & GitHub
+- VS Code
 
 ---
 
-## Step 1: Clone the Repository
+## Project Structure
 
-```bash
-git clone <repository-url>
-```
-
-Open the project folder:
-
-```bash
-cd screen-time-journal
-```
+backend/
+├── app.py
+├── db.py
+├── requirements.txt
+├── setup.md
+└── README.md
 
 ---
 
-## Step 2: Create a Virtual Environment
+## Database Setup
 
-Go to the backend folder:
+1. Install PostgreSQL and pgAdmin.
+2. Create a database named:
 
-```bash
-cd backend
+```
+screen_time_journal
 ```
 
-Create the virtual environment:
+3. Execute the SQL scripts to create:
+   - users
+   - activities
+   - screen_logs
 
-```bash
-python -m venv venv
-```
-
-Activate it (Windows):
-
-```bash
-.\venv\Scripts\activate
-```
+4. Insert the sample data into all three tables.
 
 ---
 
-## Step 3: Install Dependencies
+## Configure Database Connection
+
+Open `db.py` and update the following values according to your PostgreSQL installation:
+
+- Host
+- Database Name
+- Username
+- Password
+- Port
+
+---
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -55,30 +67,19 @@ pip install -r requirements.txt
 
 ---
 
-## Step 4: Configure PostgreSQL
-
-1. Open PostgreSQL.
-2. Create the required database.
-3. Update the database connection details in `db.py`:
-
-- Host
-- Database Name
-- Username
-- Password
-
----
-
-## Step 5: Run the FastAPI Server
+## Run the Backend
 
 ```bash
 uvicorn app:app --reload
 ```
 
----
+Server URL:
 
-## Step 6: Open the API Documentation
+```
+http://127.0.0.1:8000
+```
 
-Open your browser and visit:
+Swagger Documentation:
 
 ```
 http://127.0.0.1:8000/docs
@@ -86,18 +87,21 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## Available APIs
+## Features
 
-- GET /
-- GET /users
-- GET /activities
-- GET /screenlogs
-- POST /screenlogs
-- PUT /screenlogs/{log_id}
-- DELETE /screenlogs/{log_id}
+- Database Connection
+- User Management
+- Activity Management
+- Screen Log Management
+- CRUD Operations
+- REST APIs using FastAPI
 
 ---
 
-## Project Developed By
+## Developed By
 
-Jasleen Kaur
+**Jasleen Kaur**
+
+B.Tech Computer Science Engineering (AI & Data Engineering)
+
+Lovely Professional University

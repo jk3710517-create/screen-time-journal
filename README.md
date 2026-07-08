@@ -1,77 +1,132 @@
-# Screen Time Journal API
+# 📱 Screen Time Journal
 
-## Project Description
-
-The Screen Time Journal API is a backend project developed using FastAPI and PostgreSQL. It helps users manage and track their daily screen time activities. The API supports viewing, adding, updating, and deleting screen log records.
+A Full Stack Screen Time Tracking application developed using **FastAPI**, **PostgreSQL**, and **Python**. The project helps users record, manage, and analyze their daily screen usage across different devices and activities.
 
 ---
 
-## Technologies Used
+## 🚀 Project Overview
 
+Screen Time Journal allows users to:
+
+- Register and manage users
+- Store different activities (Coding, YouTube, Netflix, Reading, etc.)
+- Record daily screen time
+- Track device usage
+- Perform complete CRUD operations
+- Store all data in PostgreSQL
+
+---
+
+## ✨ Features
+
+- User Management
+- Activity Management
+- Screen Time Logging
+- Create, Read, Update & Delete (CRUD)
+- FastAPI REST APIs
+- PostgreSQL Database Integration
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
 - Python
 - FastAPI
 - PostgreSQL
 - psycopg2
-- Pydantic
 - Uvicorn
 
----
-
-## Features
-
-- View all users
-- View all activities
-- View all screen logs
-- Add a new screen log
-- Update screen log hours
-- Delete a screen log
+### Tools
+- VS Code
+- pgAdmin
+- Git
+- GitHub
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-```
-backend/
-│── app.py
-│── db.py
-│── requirements.txt
-│── README.md
+```text
+screen-time-journal/
+│
+├── backend/
+│   ├── app.py
+│   ├── db.py
+│   ├── requirements.txt
+│   ├── setup.md
+│   └── README.md
 ```
 
 ---
 
-## Installation
+## 🗄️ Database Tables
 
-1. Clone the repository.
-2. Create and activate a virtual environment.
-3. Install dependencies:
+### Users
+- user_id
+- name
+- email
+- password
+- created_at
 
-```bash
-pip install -r requirements.txt
-```
+### Activities
+- activity_id
+- activity_name
+- category
 
-4. Run the server:
+### Screen Logs
+- log_id
+- user_id
+- activity_id
+- log_date
+- device
+- hours_spent
+
+---
+
+## 🔄 CRUD Operations
+
+- Create Screen Log
+- View Users
+- View Activities
+- View Screen Logs
+- Update Screen Log
+- Delete Screen Log
+
+---
+
+## ▶️ Running the Project
 
 ```bash
 uvicorn app:app --reload
 ```
 
----
+Open Swagger UI:
 
-## API Endpoints
-
-| Method | Endpoint |
-|---------|----------|
-| GET | / |
-| GET | /users |
-| GET | /activities |
-| GET | /screenlogs |
-| POST | /screenlogs |
-| PUT | /screenlogs/{log_id} |
-| DELETE | /screenlogs/{log_id} |
+```
+http://127.0.0.1:8000/docs
+```
 
 ---
 
-## Author
+## 🎯 Future Enhancements
 
-Jasleen Kaur
+- User Authentication
+- Dashboard with Charts
+- Weekly & Monthly Reports
+- Mobile Responsive Frontend
+- AI-based Screen Time Analysis
+
+---
+
+## 👩‍💻 Developed By
+
+**Jasleen Kaur**
+
+B.Tech Computer Science Engineering (AI & Data Engineering)
+
+Lovely Professional University
+
+---
+
+⭐ Thank you for visiting this repository!
